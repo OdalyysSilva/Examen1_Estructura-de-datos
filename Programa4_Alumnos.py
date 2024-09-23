@@ -8,7 +8,7 @@ class Estudiante:
             print(f"{nombre} ha sido agregado al arreglo.")
     
     def busquedaA(self, arreglo1, arreglo2):
-        if not arreglo1:  # Condición base: arreglo1 vacío
+        if not arreglo1:
             return []
         if arreglo1[0] not in arreglo2:
             return [arreglo1[0]] + self.busquedaA(arreglo1[1:], arreglo2)
@@ -16,7 +16,7 @@ class Estudiante:
             return self.busquedaA(arreglo1[1:], arreglo2)
 
     def busquedaB(self, arreglo2, arreglo1):
-        if not arreglo2:  # Condición base: arreglo2 vacío
+        if not arreglo2:
             return []
         if arreglo2[0] not in arreglo1:
             return [arreglo2[0]] + self.busquedaB(arreglo2[1:], arreglo1)
@@ -24,7 +24,7 @@ class Estudiante:
             return self.busquedaB(arreglo2[1:], arreglo1)
 
     def busqueda_comun(self, arreglo1, arreglo2):
-        if not arreglo1:  # Condición base: arreglo1 vacío
+        if not arreglo1: 
             return []
         if arreglo1[0] in arreglo2:
             return [arreglo1[0]] + self.busqueda_comun(arreglo1[1:], arreglo2)
